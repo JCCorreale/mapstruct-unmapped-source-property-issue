@@ -3,7 +3,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 
-@Mapper(unmappedSourcePolicy = ReportingPolicy.ERROR) // ReportingPolicy.WARN
+// ReportingPolicy.WARN produces warning Unmapped source properties: "field1, field2" if ignoreUnmappedSourceProperties is not specified
+@Mapper(unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface MyMapper {
 
     @Mapping(target = "nested", source = "mySource")
