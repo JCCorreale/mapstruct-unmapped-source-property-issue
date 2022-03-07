@@ -1,3 +1,5 @@
+package example2;
+
 public class MySource {
 
     private String field1;

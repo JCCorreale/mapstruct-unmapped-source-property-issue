@@ -1,3 +1,5 @@
+package example2;
+
 import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -10,5 +12,5 @@ public interface MyMapper {
     @Mapping(target = "nested", source = "mySource")
     // Without this line build would fail with error: Unmapped source properties: "field1, field2"
     @BeanMapping(ignoreUnmappedSourceProperties = { "field1", "field2" })
-    MyTarget map(MySource mySource);
+    MyTarget map(MySource mySource, String someOtherField);
 }
